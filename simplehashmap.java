@@ -8,7 +8,6 @@ class array{
 	int id;
 	link next;
 	
-	
 	public array(String name,String email,int id) {
 		
 		this.email=email;
@@ -147,10 +146,10 @@ public class arrayclass {
 				System.out.println("Enter the email : ");
 				String email1=input.next();
 				int out1=f.findarray(name1);
-				if(name1.compareTo(a[out1].name)==0 && email1.compareTo(a[out1].email)==0)
+				if(a[out1]!=null && name1.compareTo(a[out1].name)==0 && email1.compareTo(a[out1].email)==0)
 				{
 					System.out.println(a[out1].email+" "+a[out1].id);
-				}else if(a[out1].next!=null)
+				}else if(a[out1]!=null && a[out1].next!=null)
 				{
 					f.printdata(a[out1].next,name1,email1);
 				}else {
